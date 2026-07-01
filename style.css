@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+body{
+    height: 100wh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:mistyrose;
+}
+.player-wrapper{
+    padding: 15px;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border-radius: 25px;
+}
+.player{
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    border: 4px solid brown;
+}
+.cover{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.controls button{
+    font-size: 24px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    width: 50px;
+    height: 50px;
+}
+.controls button:hover{
+    transform: scale(1.2);
+    background:transparent;
+}
+.progress{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+#progress {
+    width: 80%;
+    accent-color:beige;
+    height: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cd{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: spin 6s linear infinite;
+}
+@keyframes spin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+#play
+{
+    width: 65px;
+    height: 65px;
+    font-size: 26px;
+}
+.volume{
+    position: absolute;
+    bottom: 70px;
+    right: 40px;
+    display:none;
+}
+.volume input{
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    width: 5px;
+    height: 100px;
+    accent-color: beige;
+}
