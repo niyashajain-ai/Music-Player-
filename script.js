@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const progress = document.getElementById("progress");
     const volBtn = document.getElementById("volBtn");
     const volumeDiv= document.querySelector(".volume");
+    const volumeSlider= document.getElementById("volume")
     volBtn.addEventListener("click", ()=> {
         if(volumeDiv.style.display==="none"){
             volumeDiv.style.display="block";
@@ -16,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     const songs = [
-        { name: "Song Title 1", artist: "Artist 1", src: "songs/song1.mp3" },
-        { name: "Song Title 2", artist: "Artist 2", src: "songs/song2.mp3" }
+        { name: "Treat You Better", artist: "Shawn Mendes", src: "songs/song1.mp3" },
+        { name: "Hey Sexy Lady", artist: "Shaggy, Brian & Tony Gold ", src: "songs/song2.mp3" }
     ];
-    console.log(playBtn, prevBtn, nextBtn, progress, volume, audio, title, artist)
+    console.log(playBtn, prevBtn, nextBtn, progress, volumeSlider, audio, title, artist)
     let songIndex = 0;
     let isPlaying = false;
     function loadSong(index) {
@@ -61,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     progress.addEventListener("input", () => {
         audio.currentTime = (progress.value / 100) * audio.duration;
     });
-    volume.addEventListener("input", () => {
-        audio.volume = volume.value;
+    volumeSlider.addEventListener("input", () => {
+        audio.volume = volumeSlider.value;
     });
     loadSong(songIndex);
 
