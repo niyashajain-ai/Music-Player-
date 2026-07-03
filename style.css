@@ -66,12 +66,36 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
-.cd{
+.cd-wrapper{
     width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
     animation: spin 6s linear infinite;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.cd{
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.cd-wrapper::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: mistyrose;
+    border-radius: 50%;
+
 }
 @keyframes spin{
     from {transform: rotate(0deg);}

@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const progress = document.getElementById("progress");
     const volBtn = document.getElementById("volBtn");
     const volumeDiv= document.querySelector(".volume");
-    const volumeSlider= document.getElementById("volume")
+    const volumeSlider= document.getElementById("volume");
+    const cd= document.querySelector(".cd");
+    const cdWrapper= document.querySelector(".cd-wrapper");
     volBtn.addEventListener("click", ()=> {
         if(volumeDiv.style.display==="none"){
             volumeDiv.style.display="block";
@@ -17,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     const songs = [
-        { name: "Treat You Better", artist: "Shawn Mendes", src: "songs/song1.mp3" },
-        { name: "Hey Sexy Lady", artist: "Shaggy, Brian & Tony Gold ", src: "songs/song2.mp3" }
+        { name: "Treat You Better", artist: "Shawn Mendes", src: "songs/song1.mp3", cover:"covers/song1.jpg" },
+        { name: "Hey Sexy Lady", artist: "Shaggy, Brian & Tony Gold ", src: "songs/song2.mp3", cover:"covers/song2.jpg" }
     ];
     console.log(playBtn, prevBtn, nextBtn, progress, volumeSlider, audio, title, artist)
     let songIndex = 0;
@@ -27,18 +29,22 @@ document.addEventListener("DOMContentLoaded", () => {
         title.textContent = songs[index].name;
         artist.textContent = songs[index].artist;
         audio.src = songs[index].src;
+        cd.src= songs[index].cover;
 
     }
     function playSong() {
         audio.play();
         playBtn.innerHTML = "⏸";
         isPlaying = true;
+        cdWrapper.style.animationPlayState = "running";
 
     }
     function pauseSong() {
         audio.pause();
         playBtn.innerHTML = "▶";
         isPlaying = false;
+        cdWrapper.style.animationPlayState = "paused";
+
     }
     function nextSong() {
         songIndex = (songIndex + 1) % songs.length;
