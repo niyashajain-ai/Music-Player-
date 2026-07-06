@@ -35,6 +35,22 @@ body{
     object-fit: cover;
     border-radius: 10px;
 }
+#title{
+    padding-top: 20px;
+    font-family: "bonheur Royale";
+    font-size: 40px;
+    background: linear-gradient(rgb(211, 204, 204), black);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+#artist{
+    font-family: "beau rivage";
+    font-weight:500;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
 .controls{
     display: flex;
     justify-content: center;
@@ -93,8 +109,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 12px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     background: mistyrose;
     border-radius: 50%;
 
