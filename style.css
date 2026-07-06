@@ -10,11 +10,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background:beige;
+    background:linear-gradient(240deg,pink,lavenderBlush);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .player-wrapper{
     padding: 15px;
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background: linear-gradient(240deg,paleVioletRed, peachPuff);
     border-radius: 25px;
 }
 .player{
