@@ -6,7 +6,7 @@
 
 }
 body{
-    height: 100wh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,7 +96,7 @@ body{
     border-radius: 50%;
     object-fit: cover;
     animation: spin 6s linear infinite;
-    background: #111;
+    background:black;
     display: flex;
     align-items: center;
     justify-content: center;
